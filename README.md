@@ -9,17 +9,15 @@
 - WowYiJiu保留随时更改或补充此免责声明的权利。一旦使用并复制了任何相关脚本，则视为您已接受此免责声明 
 - 您必须在下载后的24小时内从计算机或手机中完全删除以上内容
 
-### 使用教程（只适配单账号，多账号请自行解决）
-替换serv00.sh的`password`、`username`、`panelX.serv00.com`
-```bash
-sshpass -p 'password' ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -tt username@panelX.serv00.com "ps -A; echo '登录成功'"
-```
->将`serv00.sh`、`serv00.py`和`notify.py`放在青龙面板同一文件夹下
-- 任务名：serv00登陆
+### 使用教程（支持serv00和ct8）
+1. 青龙面板安装Linux依赖`sshpass`
+2. 将`serv00.sh`、`serv00.py`、`accounts.json`和`notify.py`放在青龙面板同一文件夹下
+- 任务名：serv00&ct8保活
 - 命令：task serv00.sh
 - 定时：0 7 1,15 * *
 >定时规则为每月1号和15号的7点，请自行修改
 ### 图片运行示例
-![image](https://github.com/WowYiJiu/image/raw/master/git/image.o8eotf4c6mo.webp)
-![image](https://github.com/WowYiJiu/image/raw/master/git/image.4v842ybg69o0.webp)
-![image](https://github.com/WowYiJiu/image/raw/master/git/image.kjhc71chfs0.webp)
+![image](https://github.com/WowYiJiu/image/raw/master/git/image.5rffffmjy1c0.webp)
+![image](https://github.com/WowYiJiu/image/raw/master/git/image.2hixv7h1hk00.webp)
+![image](https://github.com/WowYiJiu/image/raw/master/git/image.50onb7qwplk0.webp)
+![image](https://github.com/WowYiJiu/image/raw/master/git/image.5zvdxhuk3qo0.webp)

@@ -1,0 +1,14 @@
+{
+	"accounts": [
+		{
+			"username": "user1",
+			"password": "password",
+			"panel": "panel.ct8.pl"
+		},
+		{
+			"username": "user2",
+			"password": "password",
+			"panel": "panel7.serv00.com"
+		}
+	]
+}

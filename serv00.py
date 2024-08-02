@@ -1,6 +1,6 @@
 import sys
 from os import path
-from datetime import datetime
+
 
 message = ""
 
@@ -18,20 +18,24 @@ def load_send():
         return False
 
 
-def main():
-    result = int(sys.argv[1])
-    now = datetime.now()
-    current_time = now.strftime("%Y-%m-%d %H:%M:%S")
-    if result == 1:
-        message = f"serv00登录成功\n登陆时间：{current_time}"
-    else:
-        message = "serv00登录失败"
+def main(login_results):
+    global message
+    for result in login_results:
+        username, panel, login_result = result.split(":")
+        login_result = int(login_result)
+
+        if login_result == 1:
+            message += f"用户：{username} 登录面板：{panel} 成功\n"
+        else:
+            message += f"用户：{username} 登录面板：{panel} 失败\n"
+
     send = load_send()
     if callable(send):
-        send("serv00", message)
+        send("serv00&ct8", message)
     else:
         print("\n加载通知服务失败")
 
 
 if __name__ == "__main__":
-    main()
+    login_results = sys.argv[1:]
+    main(login_results)
